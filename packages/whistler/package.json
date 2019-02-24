@@ -1,8 +1,11 @@
 {
-  "name": "@open-scanner-serial/interface",
+  "name": "@open-scanner-serial/whistler",
   "version": "0.0.0",
-  "description": "interface standards in typescript",
+  "description": "whistler",
   "author": "Aaron Shapiro <shapia4@rpi.edu>",
+  "maintainers": [
+    "Josh Berman <bermaj@rpi.edu>"
+  ],
   "homepage": "https://github.com/Open-Scanner-Serial/OSS#readme",
   "license": "MIT",
   "main": "lib/index.js",
@@ -22,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/Open-Scanner-Serial/OSS/issues"
+  },
+  "dependencies": {
+    "@open-serial-scanner/interface": "^0.0.0"
   }
 }

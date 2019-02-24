@@ -10,9 +10,13 @@
   "devDependencies": {
     "@types/jest": "^24.0.6",
     "@types/node": "^11.9.4",
+    "@types/serialport": "^7.0.2",
     "jest": "^24.1.0",
     "lerna": "^3.4.3",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "serialport": "^7.1.4"
   }
 }
