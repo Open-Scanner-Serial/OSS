@@ -18,7 +18,9 @@
     "url": "git+https://github.com/Open-Scanner-Serial/OSS.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest"
   },
   "bugs": {
     "url": "https://github.com/Open-Scanner-Serial/OSS/issues"
