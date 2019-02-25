@@ -5,6 +5,7 @@
     "tests": "jest",
     "testWithCoverage": "jest --collectCoverage",
     "bootstrap": "lerna bootstrap --hoist",
+    "link": "lerna link convert",
     "publish": "lerna publish"
   },
   "devDependencies": {
@@ -17,6 +18,7 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
-    "serialport": "^7.1.4"
+    "@open-scanner-serial/interface": "file:packages/interface",
+    "@open-scanner-serial/whistler": "file:packages/whistler"
   }
 }

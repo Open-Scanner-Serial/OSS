@@ -30,5 +30,6 @@
   },
   "dependencies": {
     "@open-serial-scanner/interface": "^0.0.0"
-  }
+  },
+  "gitHead": "ad725bbaafa0fa2cb23bd6387165f9d26605277a"
 }
