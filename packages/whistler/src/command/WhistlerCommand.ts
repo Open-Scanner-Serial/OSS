@@ -1,12 +1,12 @@
 import { WhistlerDeviceKey } from "../constants/WhistlerDeviceKey";
 import { WhistlerResponse } from "../response/WhistlerResponse";
 
-export class WhistlerCommand<R extends WhistlerResponse> {
+export abstract class WhistlerCommand<R extends WhistlerResponse> {
 
-  protected readonly deviceKey: WhistlerDeviceKey;
-
-  constructor(deviceKey: WhistlerDeviceKey) {
-    this.deviceKey = deviceKey;
+  constructor() {
   }
+
+  public abstract getBinaryInput(): Array<number>;
+  public abstract getResponse(binaryOutput: Array<number>): R;
 
 }
