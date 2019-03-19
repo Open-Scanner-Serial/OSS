@@ -1,8 +1,8 @@
 export class WhistlerResponse {
 
-  protected readonly binaryData: Array<number>;
+  protected readonly binaryData: Buffer;
 
-  constructor(binaryData: Array<number>) {
+  constructor(binaryData: Buffer) {
     this.binaryData = binaryData;
   }
 

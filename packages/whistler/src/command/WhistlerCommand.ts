@@ -7,6 +7,6 @@ export abstract class WhistlerCommand<R extends WhistlerResponse> {
   }
 
   public abstract getBinaryInput(): Array<number>;
-  public abstract getResponse(binaryOutput: Array<number>): R;
+  public abstract getResponse(binaryOutput: Buffer): R;
 
 }

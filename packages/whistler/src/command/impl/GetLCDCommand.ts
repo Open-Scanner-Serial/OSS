@@ -7,7 +7,7 @@ export class GetLCDCommand extends WhistlerCommand<GetLCDResponse> {
     return [0x4C];
   }
 
-  public getResponse(binaryOutput: Array<number>): GetLCDResponse {
+  public getResponse(binaryOutput: Buffer): GetLCDResponse {
     return new GetLCDResponse(binaryOutput);
   }
 

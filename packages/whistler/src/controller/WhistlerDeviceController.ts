@@ -4,6 +4,7 @@ import { DeviceController } from "@open-scanner-serial/interface";
 
 import { WhistlerCommand } from "../command/WhistlerCommand";
 import { WhistlerResponse } from "../response/WhistlerResponse";
+import { BinaryUtilities } from "../utilities/BinaryUtilities";
 
 export class WhistlerDeviceController implements DeviceController<WhistlerCommand<any>, WhistlerResponse> {
 
@@ -11,6 +12,7 @@ export class WhistlerDeviceController implements DeviceController<WhistlerComman
   private deviceConnection: SerialPort;
 
   private currentOutput?: Buffer;
+  private currentCompleteCallback?: () => any;
 
   constructor(portInfo: PortInfo) {
     this.portInfo = portInfo;
@@ -51,7 +53,25 @@ export class WhistlerDeviceController implements DeviceController<WhistlerComman
 
 
   public issueCommand(command: WhistlerCommand<any>): Promise<WhistlerResponse> {
-    return null;
+    return new Promise<WhistlerResponse>(((resolve, reject) => {
+      try {
+        if (!this.deviceConnection.isOpen) reject("Cannot issue command: connection not open");
+        const binaryMessage = BinaryUtilities.getBinaryMessage(command.getBinaryInput());
+        this.deviceConnection.write(binaryMessage, error => reject(error));
+
+        this.currentCompleteCallback = () => {
+          const output = this.currentOutput;
+
+          this.currentOutput = undefined;
+          this.currentCompleteCallback = undefined;
+
+          resolve(command.getResponse(output));
+        };
+      }
+      catch (e) {
+        reject(e);
+      }
+    }))
   }
 
 }
