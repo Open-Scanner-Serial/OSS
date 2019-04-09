@@ -22,6 +22,18 @@
     "build": "tsc",
     "test": "jest"
   },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/Open-Scanner-Serial/OSS/issues"
   },

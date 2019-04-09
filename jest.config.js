@@ -4,8 +4,10 @@ module.exports = {
   ],
   collectCoverage: true,
   collectCoverageFrom: [
-    'packages/**/*.{js}',
-    '!**/node_modules/**',
+    '**/packages/*/**/*.js',
+    '**/packages/*/**/*.ts',
+    '!**/test/**',
+    '!**/lib/**',
   ],
   transform: {
     "^.+\\.tsx?$": "ts-jest"
@@ -20,4 +22,3 @@ module.exports = {
     "node"
   ],
 };
-
