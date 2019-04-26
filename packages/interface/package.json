@@ -1,6 +1,6 @@
 {
   "name": "@open-scanner-serial/interface",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "interface standards in typescript",
   "author": "Aaron Shapiro <shapia4@rpi.edu>",
   "homepage": "https://github.com/Open-Scanner-Serial/OSS#readme",
