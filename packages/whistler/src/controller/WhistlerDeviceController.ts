@@ -1,12 +1,12 @@
 import SerialPort, { PortInfo } from "serialport";
 
-import { DeviceController } from "@open-scanner-serial/interface";
+// import { DeviceController } from "@open-scanner-serial/interface";
 
 import { WhistlerCommand } from "../command/WhistlerCommand";
 import { WhistlerResponse } from "../response/WhistlerResponse";
 import { BinaryUtilities } from "../utilities/BinaryUtilities";
 
-export class WhistlerDeviceController implements DeviceController<WhistlerCommand<any>, WhistlerResponse> {
+export class WhistlerDeviceController {
 
   private portInfo: SerialPort.PortInfo;
   private deviceConnection: SerialPort;
