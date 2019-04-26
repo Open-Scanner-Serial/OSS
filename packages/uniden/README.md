@@ -11,9 +11,11 @@ import {
   UserRecordControlCommand 
 } from "@open-scanner-serial/uniden";
 
+import { ConnectionUtilities } from "@open-scanner-serial/interface";
+
 (async () => {
 
-  const portInfo = await ConnectionUtils.getDevicePortInfo("UNIDEN AMERICA CORP.");
+  const portInfo = await ConnectionUtilities.getDevicePortInfo("UNIDEN AMERICA CORP.");
   const controller = new UnidenDeviceController(portInfo);
   await controller.connect();
   controller.listen();
