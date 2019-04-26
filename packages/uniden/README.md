@@ -1,11 +1,11 @@
-# `interface`
+# `@open-scanner-serial/uniden`
 
-> TODO: description
+> This package has a device-controller implementation for Uniden branded devices. There are also several command and responses implemented. We are welcoming contributors!
 
 ## Usage
 
 ```
-const interface = require('interface');
+import { UnidenDeviceController } from "@open-scanner-serial/uniden";
 
 // TODO: DEMONSTRATE API
 ```
