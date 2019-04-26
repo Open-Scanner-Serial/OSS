@@ -1,7 +1,7 @@
 {
-  "name": "@open-scanner-serial/whistler",
+  "name": "@open-scanner-serial/uniden",
   "version": "0.0.6",
-  "description": "whistler",
+  "description": "r",
   "author": "Aaron Shapiro <shapia4@rpi.edu>",
   "maintainers": [
     "Josh Berman <bermaj@rpi.edu>"
