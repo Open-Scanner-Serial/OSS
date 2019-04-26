@@ -5,7 +5,26 @@
 ## Usage
 
 ```js
-import { UnidenDeviceController } from "@open-scanner-serial/uniden";
+import {
+  UnidenDeviceController, 
+  UserRecordControlStatus, 
+  UserRecordControlCommand 
+} from "@open-scanner-serial/uniden";
 
-// TODO: DEMONSTRATE API
+(async () => {
+
+  const portInfo = await ConnectionUtils.getDevicePortInfo("UNIDEN AMERICA CORP.");
+  const controller = new UnidenDeviceController(portInfo);
+  await controller.connect();
+  controller.listen();
+
+  const command = new UserRecordControlCommand(UserRecordControlStatus.Start);
+  if (response.success) {
+    console.log("Recording started!");
+  }
+  else {
+    console.error("Recording could not be started");
+    console.error(response.error);
+  }
+})()
 ```
