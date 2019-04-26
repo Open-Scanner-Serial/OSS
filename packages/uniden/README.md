@@ -4,7 +4,7 @@
 
 ## Usage
 
-```
+```js
 import { UnidenDeviceController } from "@open-scanner-serial/uniden";
 
 // TODO: DEMONSTRATE API
