@@ -10,7 +10,7 @@
 
 _Authored by:_
  - Aaron J. Shapiro
- - Joshua A. Berman
+ - Joshua Berman
  
 ----------
 
