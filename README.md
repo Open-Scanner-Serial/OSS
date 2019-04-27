@@ -18,3 +18,17 @@ Development Environment
 -------------
 
 The latest version of [Node.js](https://nodejs.org/en/) > _(v8.0.0)_ should be installed on your system. If you are using Windows and are having a hard time installing the latest version, please consider using [Node Version Manager](https://github.com/creationix/nvm).
+
+Usage
+-------------
+
+Uniden and Whistler radio scanners. 
+
+Current models being implemented:
+
+  Uniden:
+    BCD436HP
+    SDS100
+    
+  Whistler:
+    WS1080
