@@ -5,7 +5,7 @@ export enum SetSystemInfoReponseStatus {
   Error = "NG"
 }
 
-export class SetSystemInfoResponseResponse extends UnidenResponse {
+export class SetSystemInfoResponse extends UnidenResponse {
 
   public isValid(): boolean {
     return false;

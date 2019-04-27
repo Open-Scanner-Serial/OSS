@@ -1,6 +1,7 @@
 import { UnidenCommand } from "../UnidenCommand";
 import { UnidenCommandType } from "../UnidenCommandType";
 
+//BR330T
 export type SystemInformation = {
   systemIndex: number,
   systemType: CreateSystemType,
