@@ -27,7 +27,7 @@ Uniden and Whistler radio scanners.
 Current models being implemented:
 
   Uniden:
-    BCD436HP
+    BCD436HP,
     SDS100
     
   Whistler:
